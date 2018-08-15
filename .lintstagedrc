@@ -1,0 +1,4 @@
+{
+  "*.js": ["npm run fix:js"],
+  "*.{css,postcss}": ["npm run fix:css"]
+}

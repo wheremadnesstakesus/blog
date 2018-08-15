@@ -1,0 +1,83 @@
+@import '../../assets/styles/animations.css';
+@import '../../assets/styles/shared.css';
+
+@define-mixin hide-posts {
+  & div:first-child,
+  & p {
+    display: none;
+  }
+}
+
+.postList {
+  @mixin container;
+
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+}
+
+.postList__first {
+  grid-template-areas:
+    "b1 b1 b1 b1 b1 b1"
+    "b1 b1 b1 b1 b1 b1"
+    "l1 l1 l1 l2 l2 l2"
+    "l1 l1 l1 l2 l2 l2";
+
+  & .post {
+    &:nth-child(1) {
+      grid-area: b1;
+    }
+
+    &:nth-child(2) {
+      grid-area: l1;
+    }
+
+    &:nth-child(3) {
+      grid-area: l2;
+    }
+  }
+}
+
+.postList__second {
+  grid-template-areas:
+    "m1 m1 m2 m2 m3 m3"
+    "m1 m1 m2 m2 m3 m3"
+    "xs1 xs1 m4 m4 m5 m5"
+    "xs2 xs2 m4 m4 m5 m5";
+
+  & .post {
+    &:nth-child(1) {
+      grid-area: m1;
+    }
+
+    &:nth-child(2) {
+      grid-area: m2;
+    }
+
+    &:nth-child(3) {
+      grid-area: m3;
+    }
+
+    &:nth-child(4) {
+      @mixin hide-posts;
+
+      grid-area: xs1;
+    }
+
+    &:nth-child(5) {
+      @mixin hide-posts;
+
+      grid-area: xs2;
+    }
+
+    &:nth-child(6) {
+      grid-area: m4;
+    }
+
+    &:nth-child(7) {
+      grid-area: m5;
+    }
+  }
+}

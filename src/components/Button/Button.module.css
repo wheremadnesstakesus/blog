@@ -1,0 +1,24 @@
+@import '../../assets/styles/shared.css';
+
+.button {
+  @mixin no-button;
+
+  background-color: var(--theme-secondary);
+  color: var(--color-white);
+  padding: 0 var(--spacing-l);
+}
+
+.primary {
+  background-color: var(--theme-primary);
+}
+
+.transparent {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.upper {
+  font-weight: var(--font-semibold);
+  letter-spacing: .0844rem;
+  text-transform: uppercase;
+}

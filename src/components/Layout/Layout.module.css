@@ -1,0 +1,27 @@
+@import '../../assets/styles/shared.css';
+
+.heading {
+  height: var(--banner-size);
+  overflow: hidden;
+  position: relative;
+}
+
+.banner {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+
+  &::before {
+    background-color: rgba(0, 0, 0, .1);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+}

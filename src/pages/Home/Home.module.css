@@ -1,0 +1,19 @@
+@import '../../assets/styles/shared.css';
+
+.section {
+  @mixin section;
+}
+
+.section__in {
+  @mixin container;
+}
+
+.section__title {
+  @mixin section-title;
+
+  color: var(--color-dark-grey);
+
+  &::before {
+    background-color: var(--color-dark-grey);
+  }
+}

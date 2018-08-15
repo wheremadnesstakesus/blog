@@ -1,0 +1,60 @@
+@import '../../assets/styles/shared.css';
+@import '../../assets/styles/animations.css';
+
+.top {
+  @mixin animation background-color;
+
+  background-color: transparent;
+  color: var(--color-white);
+  left: 0;
+  padding: var(--spacing-xxs) 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  & .menu path {
+    stroke: var(--color-white);
+  }
+}
+
+.scrolled {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-grey);
+  color: var(--color-primary);
+
+  & .menu path {
+    stroke: var(--color-primary);
+  }
+}
+
+.container {
+  @mixin container;
+  @mixin flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuAction {
+  padding: 0;
+}
+
+.menu {
+  height: auto;
+  width: var(--spacing-xxl);
+}
+
+.title {
+  font-family: var(--font-secondary);
+  font-size: var(--spacing-l);
+  font-weight: var(--font-ultra);
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.menuAction,
+.title {
+  @mixin animation color;
+}

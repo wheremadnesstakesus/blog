@@ -1,0 +1,26 @@
+@import '../../assets/styles/animations.css';
+@import '../../assets/styles/shared.css';
+
+.social {
+  display: block;
+}
+
+.network {
+  display: inline-block;
+  margin-right: var(--spacing-xxs);
+
+  & a {
+    @mixin animation color;
+
+    display: block;
+
+    &:hover {
+      color: var(--theme-secondary);
+    }
+  }
+}
+
+.icon {
+  height: var(--spacing-l);
+  width: auto;
+}

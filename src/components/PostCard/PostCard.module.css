@@ -1,0 +1,31 @@
+@import '../../assets/styles/animations.css';
+@import '../../assets/styles/shared.css';
+
+.postCard {
+  @mixin animation box-shadow .3s;
+
+  background: var(--color-white);
+  border: 1px solid #e3e5e7;
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+
+  &:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
+  }
+}
+
+.img {
+  height: 18vh;
+}
+
+.content {
+  padding: var(--spacing-xl);
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  letter-spacing: -.2px;
+}

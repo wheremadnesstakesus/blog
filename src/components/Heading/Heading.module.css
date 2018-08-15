@@ -1,0 +1,44 @@
+@import '../../assets/styles/shared.css';
+
+.heading {
+  @mixin flex column;
+  @mixin container;
+
+  height: 100%;
+
+  justify-content: center;
+}
+
+.subtitle,
+.title {
+  text-transform: uppercase;
+}
+
+.title,
+.subtitle,
+.description {
+  color: var(--color-white);
+}
+
+.subtitle,
+.description {
+  margin: 0;
+}
+
+.title {
+  font-size: var(--font-title);
+  font-weight: var(--font-ultra);
+  margin: var(--spacing-l) 0;
+  text-shadow: var(--color-white) 1px 0 0, var(--color-white) 0 1px 0, var(--color-white) -1px 0 0, var(--color-white) 0 -1px 0;
+  width: 70%;
+}
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-bold);
+}
+
+.description {
+  font-size: var(--font-size-s);
+  width: 40%;
+}
