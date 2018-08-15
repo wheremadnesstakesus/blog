@@ -1,0 +1,19 @@
+@import '../../assets/styles/animations.css';
+@import '../../assets/styles/shared.css';
+
+@define-mixin hide-posts {
+  & div:first-child,
+  & p {
+    display: none;
+  }
+}
+
+.postList {
+  @mixin container;
+}
+
+.post {
+  display: block;
+
+  margin: var(--spacing-xl) 0;
+}

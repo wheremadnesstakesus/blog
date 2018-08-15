@@ -1,0 +1,18 @@
+@import './reset.css';
+@import './color.css';
+@import './typography.css';
+@import './mq.css';
+@import './size.css';
+@import './spacing.css';
+@import './development.css';
+
+body {
+  background-color: var(--colo-white);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-kerning: normal;
+  font-size: 100%;
+  font-weight: var(--font-normal);
+  word-wrap: break-word;
+}

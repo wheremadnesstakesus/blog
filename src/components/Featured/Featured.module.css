@@ -1,0 +1,33 @@
+@import '../../assets/styles/shared.css';
+
+.featured {
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  height: 30vh;
+}
+
+.banner {
+  @mixin flex;
+
+  align-items: center;
+  background-color: var(--color-white);
+  justify-content: space-between;
+  padding: var(--spacing-l) var(--spacing-xs);
+}
+
+.title {
+  @mixin ellipsis;
+
+  font-family: var(--font-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-semibold);
+  text-align: left;
+}
+
+.icon {
+  width: var(--spacing-m);
+}

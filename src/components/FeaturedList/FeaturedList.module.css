@@ -1,0 +1,34 @@
+@import '../../assets/styles/shared.css';
+
+.section {
+  @mixin section;
+
+  background-color: var(--color-dark-grey);
+}
+
+.section__in {
+  @mixin container;
+}
+
+.section__title {
+  @mixin section-title;
+
+  color: var(--color-white);
+
+  &::before {
+    background-color: var(--color-white);
+  }
+}
+
+.list {
+  @mixin flex;
+
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+.item {
+  flex-basis: 23.5%;
+  width: 23.5%;
+}

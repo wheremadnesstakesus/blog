@@ -1,0 +1,9 @@
+.post {
+  & h1 {
+    font-size: var(--font-size-beast);
+  }
+
+  & h2 {
+    font-size: var(--font-size-xxl);
+  }
+}
