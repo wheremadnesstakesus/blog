@@ -10,7 +10,7 @@ function Featured({ title, img }) {
   return (
     <article className={styl.featured}>
       <header>
-        <Img fluid={img} alt={title} className={styl.img} loading="lazy" />
+        {img && <Img fluid={img} alt={title} className={styl.img} loading="lazy" />}
         <div className={styl.banner}>
           <h3 className={styl.title}>{title}</h3>
           <Icon icon="left" className={styl.icon} />

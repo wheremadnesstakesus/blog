@@ -3,12 +3,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const { BLOG_PATH } = require('./src/constants')
 
-console.log(process.env.GATSBY_GRAPHQL_IDE)
 // More: https://www.gatsbyjs.org/docs/node-apis/#createPages
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/BlogPost.js`)
+  const blogPost = path.resolve(`./src/templates/Post.js`)
   try {
     const result = await graphql(
       `

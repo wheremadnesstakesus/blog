@@ -6,7 +6,7 @@ const useLatestPosts = () => {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
         edges {
           node {
-            ...postInformation
+            ...previewInformation
           }
         }
       }
