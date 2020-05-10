@@ -16,7 +16,7 @@ const getLatetestFeaturedPosts = graphql`
     ) {
       edges {
         node {
-          ...postInformation
+          ...previewInformation
         }
       }
     }
@@ -38,16 +38,12 @@ function FeaturedList() {
         <h2 className={styl.section__title}>Publicaciones destacadas</h2>
         <ul className={styl.list}>
           {posts.map(({ node: { id, fields, frontmatter } }) => {
-            const {
-              hero: {
-                childImageSharp: { fluid },
-              },
-            } = frontmatter
+            const { hero } = frontmatter
 
             return (
               <li key={id} className={styl.item}>
                 <Link to={urlGenerator(BLOG_PATH, fields.slug)}>
-                  <Featured {...frontmatter} img={fluid} />
+                  <Featured {...frontmatter} img={hero?.childImageSharp.fluid} />
                 </Link>
               </li>
             )

@@ -28,8 +28,8 @@ export const siteInformation = graphql`
   }
 `
 
-export const postInformation = graphql`
-  fragment postInformation on MarkdownRemark {
+export const previewInformation = graphql`
+  fragment previewInformation on MarkdownRemark {
     id
     excerpt(pruneLength: 150, format: PLAIN)
     fields {
@@ -55,5 +55,12 @@ export const postInformation = graphql`
     wordCount {
       words
     }
+  }
+`
+
+export const postInformation = graphql`
+  fragment postInformation on MarkdownRemark {
+    ...previewInformation
+    html
   }
 `

@@ -1,5 +1,9 @@
 test
 
+# Gatsby files
+.cache/
+public
+
 # Environment variable files
 .env*
 !.env.sample
@@ -56,10 +60,6 @@ typings/
 
 # Output of 'npm pack'
 *.tgz
-
-# gatsby files
-.cache/
-public
 
 # Mac files
 .DS_Store

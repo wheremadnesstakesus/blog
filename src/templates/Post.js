@@ -8,7 +8,7 @@ import SEO from '../components/SEO'
 import { urlGenerator } from '../helpers'
 import useSiteInformation from '../hooks/useSiteInformation'
 
-function BlogPostTemplate({ path, data }) {
+function Post({ path, data }) {
   const { markdownRemark: post } = data
 
   const { siteMetadata: site } = useSiteInformation()
@@ -26,7 +26,7 @@ function BlogPostTemplate({ path, data }) {
         tags: post.frontmatter.tags,
         title,
         words: post.wordCount.words,
-        image: image.childImageSharp.fluid,
+        image: image?.childImageSharp.fluid,
       }}
       site={{ author, headline, title: siteTitle, social }}
       withSubscription
@@ -39,12 +39,12 @@ function BlogPostTemplate({ path, data }) {
   )
 }
 
-BlogPostTemplate.propTypes = {
+Post.propTypes = {
   path: PropTypes.string.isRequired,
   data: PropTypes.object,
 }
 
-export default BlogPostTemplate
+export default Post
 
 export const BlogPost = graphql`
   query BlogPostBySlug($slug: String!) {

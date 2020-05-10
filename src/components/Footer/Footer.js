@@ -15,7 +15,6 @@ const cx = classnames.bind(styl)
 
 function Footer({ author }) {
   const { edges: posts } = useLatestPosts()
-  console.log('[DEBUG]: Footer -> posts', posts)
 
   return (
     <footer className={styl.footer}>

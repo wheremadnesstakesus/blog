@@ -16,21 +16,21 @@ const POSITION = {
 
 const renderPosts = (posts) =>
   posts.map(({ node: { id, excerpt, fields, frontmatter } }, index) => {
-    const {
-      date,
-      hero: {
-        childImageSharp: { fluid },
-      },
-      tags,
-      title,
-    } = frontmatter
+    const { date, hero, tags, title } = frontmatter
 
     return (
       <li key={id} className={styl.post}>
         {POSTS_WITHOUT_IMAGE[index] ? (
           <PostCard content={excerpt} createdAt={date} slug={fields.slug} tags={tags} title={title} />
         ) : (
-          <PostCard content={excerpt} createdAt={date} image={fluid} slug={fields.slug} tags={tags} title={title} />
+          <PostCard
+            content={excerpt}
+            createdAt={date}
+            image={hero?.childImageSharp.fluid}
+            slug={fields.slug}
+            tags={tags}
+            title={title}
+          />
         )}
       </li>
     )
