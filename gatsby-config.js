@@ -47,6 +47,13 @@ module.exports = {
         name: 'posts',
       },
     },
+    process.env.GOOGLE_ANALYTICS_ID && {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        head: false,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
@@ -83,27 +90,26 @@ module.exports = {
     },
     'gatsby-plugin-postcss',
     'gatsby-plugin-svgr',
-    {
+    process.env.ANALYZE_BUNDLE_SIZE && {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         production: true,
-        disable: !process.env.ANALYZE_BUNDLE_SIZE,
         generateStatsFile: true,
         analyzerMode: 'static',
       },
     },
-    {
+    process.env.INSTAGRAM_TOKEN && {
       resolve: 'gatsby-source-instagram',
       options: {
         // eslint-disable-next-line camelcase
-        access_token: process.env.GATSBY_INSTAGRAM_TOKEN,
+        access_token: process.env.INSTAGRAM_TOKEN,
         // eslint-disable-next-line camelcase
-        instagram_id: process.env.GATSBY_INSTAGRAM_ID,
-        username: process.env.GATSBY_INSTAGRAM_USERNAME,
+        instagram_id: process.env.INSTAGRAM_ID,
+        username: process.env.INSTAGRAM_USERNAME,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
-  ],
+  ].filter(Boolean),
 }
