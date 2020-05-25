@@ -1,7 +1,7 @@
 ---
 title: Nos vamos a vivir a una furgoneta furgineta vanlife inspiracion comenzamos aventuras
 date: 2020-05-10T16:20:04.763Z
-description: pequeña descripcion
+summary: pequeña descripcion
 featured: true
 tags:
   - test

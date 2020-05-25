@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
+'use strict'
+
 const fs = require('fs')
+const path = require('path')
 
 const slugify = require('slugify')
 
@@ -23,8 +26,7 @@ ${field}: ${value}`
 }
 
 function generateMD({ title, date, ...rest }) {
-  let text = `
----
+  let text = `---
 title: ${title}
 date: ${date}`
 
@@ -65,15 +67,11 @@ function runCLI(input, options) {
       throw err
     }
 
-    console.log('[SUCCESS] El post ha sido creado con éxito!')
+    console.log('[SUCCESS] The post has been created successfully!')
   })
 }
 
 const flags = {
-  description: {
-    type: 'string',
-    alias: '-s',
-  },
   draft: {
     type: 'boolean',
     alias: '-d',
@@ -81,25 +79,32 @@ const flags = {
   featured: {
     type: 'boolean',
     alias: '-f',
+    default: false,
   },
   hero: {
     type: 'string',
     alias: '-i',
   },
   keywords: {
-    type: 'array',
+    type: 'string',
     alias: '-k',
+    isMultiple: true,
   },
   tags: {
-    type: 'array',
+    type: 'string',
     alias: '-t',
+    isMultiple: true,
+  },
+  summary: {
+    type: 'string',
+    alias: '-s',
   },
 }
 
 // eslint-disable-next-line import/order
 const cli = require('meow')({
   help: require('./help'),
-  pkg: require('../package.json'),
+  pkg: require(path.resolve(__dirname, '../package.json')),
   flags,
 })
 

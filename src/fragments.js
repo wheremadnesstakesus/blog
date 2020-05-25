@@ -7,7 +7,7 @@ export const siteInformation = graphql`
       url
       startDate
       headline
-      description
+      summary
       keywords
       author
       social {
@@ -40,7 +40,7 @@ export const previewInformation = graphql`
     }
     frontmatter {
       date(formatString: "YYYY-MM-DD hh:mm")
-      description
+      summary
       hero {
         childImageSharp {
           fluid(maxWidth: 600, quality: 50) {

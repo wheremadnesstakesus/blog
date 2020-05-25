@@ -14,13 +14,13 @@ function Post({ path, data }) {
   const { siteMetadata: site } = useSiteInformation()
 
   const { author, headline, title: siteTitle, url, social } = site
-  const { description, hero: image, keywords, title } = post.frontmatter
+  const { summary, hero: image, keywords, title } = post.frontmatter
 
   return (
     <Layout
       post={{
         date: post.frontmatter.date,
-        description,
+        summary,
         path,
         reading: post.fields.readingTime.text,
         tags: post.frontmatter.tags,
@@ -31,7 +31,7 @@ function Post({ path, data }) {
       site={{ author, headline, title: siteTitle, social }}
       withSubscription
     >
-      <SEO description={description} isPost keywords={keywords} title={title} url={urlGenerator(url, path)} />
+      <SEO description={summary} isPost keywords={keywords} title={title} url={urlGenerator(url, path)} />
       <h1>{post.frontmatter.title}</h1>
       <p>{post.frontmatter.date}</p>
       <section dangerouslySetInnerHTML={{ __html: post.html }} />
