@@ -52,6 +52,10 @@
   letter-spacing: 1px;
   margin: 0;
   text-transform: uppercase;
+
+  @media (width < 40rem) {
+    font-size: .7rem;
+  }
 }
 
 .menuAction,

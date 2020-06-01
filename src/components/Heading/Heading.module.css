@@ -34,6 +34,14 @@
   &:not(.post) {
     width: 70%;
   }
+
+  @media (width < 40rem) {
+    &,
+    &:not(.post) {
+      font-size: 6vw;
+      width: 100%;
+    }
+  }
 }
 
 .subtitle {
@@ -44,6 +52,10 @@
 .description {
   font-size: var(--font-size-s);
   width: 40%;
+
+  @media (width < 40rem) {
+    width: 100%;
+  }
 }
 
 .icon {
