@@ -41,7 +41,6 @@ function Heading({ post, title, subtitle, startDate }) {
 Heading.propTypes = {
   post: PropTypes.bool,
   date: PropTypes.string,
-  readingTime: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   startDate: PropTypes.string,
@@ -51,7 +50,6 @@ Heading.propTypes = {
 Heading.defaultProps = {
   post: false,
   date: '',
-  readingTime: 0,
   title: '',
   subtitle: '',
   startDate: '',

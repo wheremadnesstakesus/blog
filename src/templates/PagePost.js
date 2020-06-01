@@ -14,7 +14,7 @@ function PagePost({ path, data }) {
 
   const { siteMetadata: site } = useSiteInformation()
 
-  const { author, headline, title: siteTitle, url, social } = site
+  const { author, headline, title: siteTitle, siteUrl, social } = site
   const { summary, hero: image, keywords, title } = post.frontmatter
   console.log(post.frontmatter)
   return (
@@ -23,7 +23,6 @@ function PagePost({ path, data }) {
         date: post.frontmatter.date,
         summary,
         path,
-        reading: post.fields.readingTime.text,
         tags: post.frontmatter.tags,
         title,
         words: post.wordCount.words,
@@ -31,7 +30,7 @@ function PagePost({ path, data }) {
       }}
       site={{ author, headline, title: siteTitle, social }}
     >
-      <SEO description={summary} isPost keywords={keywords} title={title} url={urlGenerator(url, path)} />
+      <SEO description={summary} isPost keywords={keywords} title={title} url={urlGenerator(siteUrl, path)} />
       <p>{post.frontmatter.date}</p>
       <Post post={post.html} />
     </Layout>
@@ -47,7 +46,7 @@ export default PagePost
 
 export const BlogPost = graphql`
   query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug }, readingTime: {} }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       ...postInformation
     }
   }
