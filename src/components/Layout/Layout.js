@@ -18,7 +18,6 @@ function Layout({ children, post, site }) {
           title={post.title || site.title}
           subtitle={site.headline}
           startDate={site.startDate}
-          readingTime={post.reading}
           date={post.date}
           post={!!Object.keys(post).length}
           words={post.words}

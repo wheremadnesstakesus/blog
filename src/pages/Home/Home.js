@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <Layout site={site}>
-      <SEO description={site.description} keywords={site.keywords} title={site.title} url={site.url} />
+      <SEO description={site.description} keywords={site.keywords} title={site.title} url={site.siteUrl} />
       <h2 className={styl.section__title}>Últimas publicaciones</h2>
       <PostList posts={posts} />
     </Layout>

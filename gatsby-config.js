@@ -12,13 +12,13 @@ module.exports = {
     headline: 'Vanlifers y viajeros a tiempo completo!',
     description: 'Blog de viaje donde dos locos contaran sus pequeñas aventuras en todos y cada uno de sus viajes.',
     author: '@dondelalocura',
-    url: 'https://dondelalocuranoslleve.es',
+    siteUrl: 'https://dondelalocuranoslleve.com',
     keywords: ['viajes', 'vanlife', 'aventuras'],
     startDate: '2019-05-30',
     social: {
       twitter: {
         name: '@dondelalocuranoslleve',
-        url: 'https://twtter.com/dondelalocuranoslleve',
+        url: 'https://twitter.com/dondelalocuranoslleve',
       },
       facebook: {
         name: 'dondelalocuranoslleve',
@@ -88,6 +88,7 @@ module.exports = {
         icon: 'src/assets/logo.png',
       },
     },
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-postcss',
     'gatsby-plugin-svgr',
     process.env.ANALYZE_BUNDLE_SIZE && {

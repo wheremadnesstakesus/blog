@@ -7,7 +7,7 @@ export const siteInformation = graphql`
       headline
       description
       author
-      url
+      siteUrl
       keywords
       startDate
       social {
@@ -60,9 +60,6 @@ export const postInformation = graphql`
     excerpt(pruneLength: 150, format: PLAIN)
     fields {
       slug
-      readingTime {
-        text
-      }
     }
     frontmatter {
       summary
