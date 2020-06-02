@@ -1,2 +1,5 @@
-https://en.example.com/* /en/:splat 200
-https://es.example.com/* /es/:splat 200
+[[redirects]]
+  from = "https://it.dondelalocuranoslleve.com/*"
+  to = "/test:splat"
+  status = 200
+  force = true

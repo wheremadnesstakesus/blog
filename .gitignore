@@ -2,6 +2,9 @@ test
 report.html
 stats.json
 
+# Netlify files
+.netlify
+
 # Gatsby files
 .cache/
 public
@@ -70,5 +73,6 @@ typings/
 yarn-error.log
 .pnp/
 .pnp.js
+
 # Yarn Integrity file
 .yarn-integrity
