@@ -1,5 +1,2 @@
-[[redirects]]
-  from = "/test"
-  to = "https://it.dondelalocuranoslleve.com"
-  status = 301
-  force = true
+https://en.example.com/* /en/:splat 200
+https://es.example.com/* /es/:splat 200
