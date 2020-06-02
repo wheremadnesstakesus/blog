@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/test"
+  to = "https://it.dondelalocuranoslleve.com"
+  status = 301
+  force = true
