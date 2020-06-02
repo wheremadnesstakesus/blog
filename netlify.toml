@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "https://it.dondelalocuranoslleve.com/*"
-  to = "/test"
-  status = 200
-  force = true
