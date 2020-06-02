@@ -11,23 +11,26 @@ function PostList({ posts }) {
   }
 
   return (
-    <ul className={styl.postList}>
-      {posts.map(({ node: { id, excerpt, fields, frontmatter } }) => {
-        const { hero, tags, title } = frontmatter
+    <React.Fragment>
+      <h2 className={styl.section__title}>Últimas publicaciones</h2>
+      <ul className={styl.postList}>
+        {posts.map(({ node: { id, excerpt, fields, frontmatter } }) => {
+          const { hero, tags, title } = frontmatter
 
-        return (
-          <li key={id} className={styl.post}>
-            <PostCard
-              content={excerpt}
-              image={hero?.childImageSharp.fluid}
-              slug={fields.slug}
-              tags={tags}
-              title={title}
-            />
-          </li>
-        )
-      })}
-    </ul>
+          return (
+            <li key={id} className={styl.post}>
+              <PostCard
+                content={excerpt}
+                image={hero?.childImageSharp.fluid}
+                slug={fields.slug}
+                tags={tags}
+                title={title}
+              />
+            </li>
+          )
+        })}
+      </ul>
+    </React.Fragment>
   )
 }
 

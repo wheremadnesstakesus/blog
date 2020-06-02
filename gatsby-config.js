@@ -88,7 +88,12 @@ module.exports = {
         icon: 'src/assets/logo.png',
       },
     },
-    'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ['/Home'],
+      },
+    },
     'gatsby-plugin-postcss',
     'gatsby-plugin-svgr',
     process.env.ANALYZE_BUNDLE_SIZE && {
