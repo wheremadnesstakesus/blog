@@ -8,14 +8,13 @@ import styl from './Footer.module.css'
 
 const cx = classnames.bind(styl)
 
-function Footer({ author }) {
+function Footer({ builtWith, copyright }) {
   return (
     <footer className={styl.footer}>
       <div className={cx(styl.section, styl.credits)}>
         <p>
-          © {new Date().getFullYear()}, Built with
-          <Icon icon="heart" className={styl.icon} />
-          by {author}! Todos los derechos reservados
+          © {new Date().getFullYear()}, {builtWith}
+          <Icon icon="heart" className={styl.icon} />! {copyright}
         </p>
       </div>
     </footer>
@@ -23,11 +22,13 @@ function Footer({ author }) {
 }
 
 Footer.propTypes = {
-  author: PropTypes.string,
+  builtWith: PropTypes.string,
+  copyright: PropTypes.string,
 }
 
 Icon.defaultProps = {
-  author: '',
+  builtWith: '',
+  copyright: '',
 }
 
 export default Footer

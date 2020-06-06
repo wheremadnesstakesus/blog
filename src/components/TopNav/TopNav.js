@@ -39,7 +39,7 @@ function Header({ prefix, title, social, pathname }) {
     if (pathname.includes('/it/')) {
       setUrl({
         es: pathname.replace('/it', ''),
-        it: 'a',
+        it: pathname,
       })
 
       return

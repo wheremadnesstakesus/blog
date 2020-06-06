@@ -26,7 +26,7 @@ function Layout({ children, prefix, post, site, pathname }) {
       <main className={styl.main}>
         <div className={styl.container}>{children}</div>
       </main>
-      <Footer author={site.author} />
+      <Footer author={site.author} builtWith={site.builtWith(site.author)} copyright={site.copyright} />
     </React.Fragment>
   )
 }
@@ -46,6 +46,8 @@ Layout.propTypes = {
   }),
   site: PropTypes.shape({
     author: PropTypes.string,
+    builtWith: PropTypes.func,
+    copyright: PropTypes.string,
     headline: PropTypes.string,
     title: PropTypes.string,
     social: PropTypes.shape({
@@ -59,6 +61,7 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   post: {},
+  copyright: '',
   prefix: '',
   site: {},
   pathname: '',

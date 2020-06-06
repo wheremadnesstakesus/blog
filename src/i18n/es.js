@@ -9,4 +9,6 @@ module.exports = {
       days,
     )}} días viviendo y viajando en nuestra furgoneta</b> , a la que llamamos Flowerneta y aquí te iremos contando todas nuestras aventuras, pensamientos y demás locuras que se nos vayan ocurriendo. Te unes a nuestra locura!`,
   latestsPosts: 'Últimas publicaciones!',
+  builtWith: (author) => `Hecho por ${author} con muchísimo `,
+  copyright: 'Todos los derechos reservados',
 }
