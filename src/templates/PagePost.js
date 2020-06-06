@@ -9,16 +9,36 @@ import SEO from '../components/SEO'
 import { urlGenerator } from '../helpers'
 import useSiteInformation from '../hooks/useSiteInformation'
 
-function PagePost({ path, data }) {
+import es from '../i18n/es'
+import it from '../i18n/it'
+
+function PagePost(props) {
+  console.log('[DEBUG]: PagePost -> props', props)
+  const { path, data, location } = props
   const { markdownRemark: post } = data
 
   const { siteMetadata: site } = useSiteInformation()
 
   const { author, headline, title: siteTitle, siteUrl, social } = site
   const { summary, hero: image, keywords, title } = post.frontmatter
-  console.log(post.frontmatter)
+
+  let home = `/${post.fields.langKey}`
+  let message = {
+    builtWith: it.builtWith,
+    copyright: it.copyright,
+  }
+  if (post.fields.langKey === 'es') {
+    message = {
+      builtWith: es.builtWith,
+      copyright: es.copyright,
+    }
+    home = '/'
+  }
+
   return (
     <Layout
+      pathname={location.pathname}
+      prefix={home}
       post={{
         date: post.frontmatter.date,
         summary,
@@ -28,7 +48,7 @@ function PagePost({ path, data }) {
         words: post.wordCount.words,
         image: image?.childImageSharp.fluid,
       }}
-      site={{ author, headline, title: siteTitle, social }}
+      site={{ author, headline, title: siteTitle, social, ...message }}
     >
       <SEO description={summary} isPost keywords={keywords} title={title} url={urlGenerator(siteUrl, path)} />
       <p>{post.frontmatter.date}</p>
@@ -40,6 +60,7 @@ function PagePost({ path, data }) {
 PagePost.propTypes = {
   path: PropTypes.string.isRequired,
   data: PropTypes.object,
+  location: PropTypes.object,
 }
 
 export default PagePost

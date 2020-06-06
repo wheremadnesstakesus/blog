@@ -9,11 +9,8 @@ if (isDevelopment) {
 module.exports = {
   siteMetadata: {
     title: 'Donde la locura nos lleve!',
-    headline: 'Vanlifers y viajeros a tiempo completo!',
-    description: 'Blog de viaje donde dos locos contaran sus pequeñas aventuras en todos y cada uno de sus viajes.',
     author: '@dondelalocura',
     siteUrl: 'https://dondelalocuranoslleve.com',
-    keywords: ['viajes', 'vanlife', 'aventuras'],
     startDate: '2019-05-30',
     social: {
       twitter: {
@@ -112,6 +109,14 @@ module.exports = {
         // eslint-disable-next-line camelcase
         instagram_id: process.env.INSTAGRAM_ID,
         username: process.env.INSTAGRAM_USERNAME,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyDefault: 'es',
+        useLangKeyLayout: false,
+        prefixDefault: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

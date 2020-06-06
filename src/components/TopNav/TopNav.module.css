@@ -62,3 +62,13 @@
 .title {
   @mixin animation color;
 }
+
+.langs {
+  @mixin flex;
+
+  font-weight: 700;
+
+  & .lang {
+    padding: 0 .5rem;
+  }
+}

@@ -1,5 +1,4 @@
 import classnames from 'classnames/bind'
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -9,31 +8,27 @@ import styl from './Footer.module.css'
 
 const cx = classnames.bind(styl)
 
-function Footer({ author }) {
+function Footer({ builtWith, copyright }) {
   return (
     <footer className={styl.footer}>
       <div className={cx(styl.section, styl.credits)}>
         <p>
-          © {new Date().getFullYear()}, Built with
-          <Icon icon="heart" className={styl.icon} />
-          by {author}! Todos los derechos reservados
+          © {new Date().getFullYear()}, {builtWith}
+          <Icon icon="heart" className={styl.icon} />! {copyright}
         </p>
-        <div className={styl.privacy}>
-          <Link to="/">Aviso legal</Link>
-          <Link to="/">Politica de privacidad</Link>
-          <Link to="/">Politica de cookies</Link>
-        </div>
       </div>
     </footer>
   )
 }
 
 Footer.propTypes = {
-  author: PropTypes.string,
+  builtWith: PropTypes.string,
+  copyright: PropTypes.string,
 }
 
 Icon.defaultProps = {
-  author: '',
+  builtWith: '',
+  copyright: '',
 }
 
 export default Footer

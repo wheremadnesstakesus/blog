@@ -8,16 +8,16 @@ import TopNav from '../TopNav'
 
 import styl from './Layout.module.css'
 
-function Layout({ children, post, site }) {
+function Layout({ children, prefix, post, site, pathname }) {
   return (
     <React.Fragment>
       <header className={styl.heading}>
-        <TopNav title={site.title} social={site.social} />
+        <TopNav title={site.title} social={site.social} prefix={prefix} pathname={pathname} />
         <Banner image={post.image} title={post.title || site.title} className={styl.banner} />
         <Heading
           title={post.title || site.title}
           subtitle={site.headline}
-          startDate={site.startDate}
+          description={site.heading}
           date={post.date}
           post={!!Object.keys(post).length}
           words={post.words}
@@ -26,13 +26,14 @@ function Layout({ children, post, site }) {
       <main className={styl.main}>
         <div className={styl.container}>{children}</div>
       </main>
-      <Footer author={site.author} />
+      <Footer author={site.author} builtWith={site.builtWith(site.author)} copyright={site.copyright} />
     </React.Fragment>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  prefix: PropTypes.string,
   post: PropTypes.shape({
     date: PropTypes.string,
     description: PropTypes.string,
@@ -45,19 +46,25 @@ Layout.propTypes = {
   }),
   site: PropTypes.shape({
     author: PropTypes.string,
+    builtWith: PropTypes.func,
+    copyright: PropTypes.string,
     headline: PropTypes.string,
     title: PropTypes.string,
     social: PropTypes.shape({
       name: PropTypes.string,
       url: PropTypes.string,
     }),
-    startDate: PropTypes.string,
+    heading: PropTypes.string,
   }),
+  pathname: PropTypes.string,
 }
 
 Layout.defaultProps = {
   post: {},
+  copyright: '',
+  prefix: '',
   site: {},
+  pathname: '',
 }
 
 export default Layout
