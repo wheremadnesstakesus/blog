@@ -8,5 +8,5 @@ module.exports = {
     `Siamo Federica e José. Viviamo e viaggiamo nel nostro van, la Flowerneta, da ${daysBetween(
       days,
     )} giorni. Qui raccontermo tutte le avventure, pensieri e riflessioni che vivremo.  Ti unisci alla nostra follia?`,
-  lastPosts: 'Ultimi Post!',
+  latestsPosts: 'Ultimi Post!',
 }

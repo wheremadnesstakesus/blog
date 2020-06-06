@@ -22,9 +22,11 @@ const scrollEvent = (elem) => () => {
   return false
 }
 
-function Header({ prefix, title, social }) {
+function Header({ prefix, title, social, pathname }) {
   const elem = React.useRef(null)
   const scroll = scrollEvent(elem)
+
+  const [url, setUrl] = React.useState({ es: '', it: '' })
 
   React.useEffect(() => {
     window.addEventListener('scroll', scroll)
@@ -32,6 +34,22 @@ function Header({ prefix, title, social }) {
     return () => window.removeEventListener('scroll', scroll)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  React.useEffect(() => {
+    if (pathname.includes('/it/')) {
+      setUrl({
+        es: pathname.replace('/it', ''),
+        it: 'a',
+      })
+
+      return
+    }
+
+    setUrl({
+      es: pathname,
+      it: `/it${pathname}`,
+    })
+  }, [pathname])
 
   return (
     <div className={styl.top} ref={elem}>
@@ -42,6 +60,18 @@ function Header({ prefix, title, social }) {
             {title}
           </Link>
         </h1>
+        <ul className={styl.langs}>
+          <li>
+            <Link to={url.es} hrefLang="es" className={styl.lang}>
+              ES
+            </Link>
+          </li>
+          <li>
+            <Link to={url.it} hrefLang="it" className={styl.lang}>
+              IT
+            </Link>
+          </li>
+        </ul>
         {/* <Button transparent className={styl.menuAction} ariaLabel="Menu">
           <Icon icon="menu" className={styl.menu} />
         </Button> */}
@@ -57,11 +87,13 @@ Header.propTypes = {
     name: PropTypes.string,
     url: PropTypes.string,
   }),
+  pathname: PropTypes.string,
 }
 
 Header.defaultProps = {
   prefix: '',
   title: '',
+  pathname: '',
   social: {},
 }
 

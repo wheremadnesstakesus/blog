@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 import { urlGenerator } from '../helpers'
 import useSiteInformation from '../hooks/useSiteInformation'
 
-function PagePost({ path, data }) {
+function PagePost({ path, data, location }) {
   const { markdownRemark: post } = data
 
   const { siteMetadata: site } = useSiteInformation()
@@ -24,6 +24,7 @@ function PagePost({ path, data }) {
 
   return (
     <Layout
+      pathname={location.pathname}
       prefix={home}
       post={{
         date: post.frontmatter.date,
@@ -46,6 +47,7 @@ function PagePost({ path, data }) {
 PagePost.propTypes = {
   path: PropTypes.string.isRequired,
   data: PropTypes.object,
+  location: PropTypes.object,
 }
 
 export default PagePost

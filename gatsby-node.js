@@ -36,10 +36,7 @@ exports.createPages = async ({ graphql, actions }) => {
       const previous = index === edges.length - 1 ? null : edges[index + 1].node
       const next = index === 0 ? null : edges[index - 1].node
 
-      let url = `/${post.node.fields.langKey}${BLOG_PATH}${post.node.fields.slug}`
-      if (post.node.fields.langKey === 'es') {
-        url = `${BLOG_PATH}${post.node.fields.slug}`
-      }
+      let url = post.node.fields.slug
 
       createPage({
         path: url,
@@ -70,9 +67,9 @@ exports.onCreateNode = ({ node, actions }) => {
       .replace('/index', '')
       .split('.')
 
-    let route = `/${url[1]}${url[0]}`
+    let route = `/${url[1]}${BLOG_PATH}${url[0]}`
     if (url[1] === 'es') {
-      route = url[0]
+      route = `${BLOG_PATH}${url[0]}`
     }
 
     createNodeField({

@@ -15,14 +15,19 @@ import message from '../i18n/es'
 
 import '../assets/styles/global.css'
 
-function Home({ data, pageContext }) {
+function Home({ data, pageContext, location }) {
   const { siteMetadata: site } = useSiteInformation()
   // const { edges: posts } = useLatestPosts()
 
   return (
-    <Layout prefix={pageContext.slug} site={{ ...site, ...message, heading: message.heading(site.startDate) }}>
+    <Layout
+      pathname={location.pathname}
+      prefix={pageContext.slug}
+      lang={pageContext.langKey}
+      site={{ ...site, ...message, heading: message.heading(site.startDate) }}
+    >
       <SEO description={site.description} keywords={site.keywords} title={site.title} url={site.siteUrl} />
-      <PostList prefix={pageContext.slug} posts={data.allMarkdownRemark.edges} />
+      <PostList posts={data.allMarkdownRemark.edges} title={message.latestsPosts} />
     </Layout>
   )
 }
@@ -33,12 +38,15 @@ Home.propTypes = {
   }),
   pageContext: PropTypes.shape({
     slug: PropTypes.string,
+    langKey: PropTypes.string,
   }),
+  location: PropTypes.object,
 }
 
 Home.defaultProps = {
   data: {},
   pageContext: {},
+  location: {},
 }
 
 export default Home

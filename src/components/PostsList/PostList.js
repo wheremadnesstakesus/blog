@@ -5,14 +5,14 @@ import PostCard from '../PostCard'
 
 import styl from './PostList.module.css'
 
-function PostList({ posts, prefix }) {
+function PostList({ posts, title }) {
   if (!posts.length) {
     return null
   }
 
   return (
     <React.Fragment>
-      <h2 className={styl.section__title}>Últimas publicaciones</h2>
+      <h2 className={styl.section__title}>{title}</h2>
       <ul className={styl.postList}>
         {posts.map(({ node: { id, excerpt, fields, frontmatter } }) => {
           const { hero, tags, title } = frontmatter
@@ -22,7 +22,6 @@ function PostList({ posts, prefix }) {
               <PostCard
                 content={excerpt}
                 image={hero?.childImageSharp.fluid}
-                prefix={prefix}
                 slug={fields.slug}
                 tags={tags}
                 title={title}
@@ -43,12 +42,12 @@ PostList.propTypes = {
       }),
     }),
   ),
-  prefix: PropTypes.string,
+  title: PropTypes.string,
 }
 
 PostList.defaultProps = {
   posts: [],
-  prefix: '',
+  title: '',
 }
 
 export default PostList

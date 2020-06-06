@@ -8,11 +8,11 @@ import TopNav from '../TopNav'
 
 import styl from './Layout.module.css'
 
-function Layout({ children, prefix, post, site }) {
+function Layout({ children, prefix, post, site, pathname }) {
   return (
     <React.Fragment>
       <header className={styl.heading}>
-        <TopNav title={site.title} social={site.social} prefix={prefix} />
+        <TopNav title={site.title} social={site.social} prefix={prefix} pathname={pathname} />
         <Banner image={post.image} title={post.title || site.title} className={styl.banner} />
         <Heading
           title={post.title || site.title}
@@ -54,12 +54,14 @@ Layout.propTypes = {
     }),
     heading: PropTypes.string,
   }),
+  pathname: PropTypes.string,
 }
 
 Layout.defaultProps = {
   post: {},
   prefix: '',
   site: {},
+  pathname: '',
 }
 
 export default Layout
