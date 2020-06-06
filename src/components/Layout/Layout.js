@@ -8,16 +8,16 @@ import TopNav from '../TopNav'
 
 import styl from './Layout.module.css'
 
-function Layout({ children, post, site }) {
+function Layout({ children, prefix, post, site }) {
   return (
     <React.Fragment>
       <header className={styl.heading}>
-        <TopNav title={site.title} social={site.social} />
+        <TopNav title={site.title} social={site.social} prefix={prefix} />
         <Banner image={post.image} title={post.title || site.title} className={styl.banner} />
         <Heading
           title={post.title || site.title}
           subtitle={site.headline}
-          startDate={site.startDate}
+          description={site.heading}
           date={post.date}
           post={!!Object.keys(post).length}
           words={post.words}
@@ -33,6 +33,7 @@ function Layout({ children, post, site }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  prefix: PropTypes.string,
   post: PropTypes.shape({
     date: PropTypes.string,
     description: PropTypes.string,
@@ -51,12 +52,13 @@ Layout.propTypes = {
       name: PropTypes.string,
       url: PropTypes.string,
     }),
-    startDate: PropTypes.string,
+    heading: PropTypes.string,
   }),
 }
 
 Layout.defaultProps = {
   post: {},
+  prefix: '',
   site: {},
 }
 

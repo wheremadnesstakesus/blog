@@ -5,7 +5,7 @@ import PostCard from '../PostCard'
 
 import styl from './PostList.module.css'
 
-function PostList({ posts }) {
+function PostList({ posts, prefix }) {
   if (!posts.length) {
     return null
   }
@@ -22,6 +22,7 @@ function PostList({ posts }) {
               <PostCard
                 content={excerpt}
                 image={hero?.childImageSharp.fluid}
+                prefix={prefix}
                 slug={fields.slug}
                 tags={tags}
                 title={title}
@@ -42,11 +43,12 @@ PostList.propTypes = {
       }),
     }),
   ),
+  prefix: PropTypes.string,
 }
 
 PostList.defaultProps = {
-  position: 'first',
   posts: [],
+  prefix: '',
 }
 
 export default PostList

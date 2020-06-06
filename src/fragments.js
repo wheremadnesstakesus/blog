@@ -4,11 +4,8 @@ export const siteInformation = graphql`
   fragment siteInformation on Site {
     siteMetadata {
       title
-      headline
-      description
       author
       siteUrl
-      keywords
       startDate
       social {
         instagram {
@@ -60,6 +57,7 @@ export const postInformation = graphql`
     excerpt(pruneLength: 150, format: PLAIN)
     fields {
       slug
+      langKey
     }
     frontmatter {
       summary

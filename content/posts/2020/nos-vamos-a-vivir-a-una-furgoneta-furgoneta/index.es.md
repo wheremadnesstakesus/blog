@@ -1,7 +1,7 @@
 ---
 title: Nos vamos a vivir a una furgoneta
 date: 2020-05-10T16:20:04.763Z
-summary: pequeña descripcion
+summary: Y es que ésta fue la forma en la que le comunicamos a nuestras familias cuáles eran nuestros planes de futuro y que ésta iba a ser nuestra casa mientras viajábamos por el mundo, al más puro estilo nómada, o como alguno de nuestros familiares lo llamaron, Hippie.
 draft: false
 featured: false
 hero: ./nos-vamos-a-vivir-a-una-furgoneta.jpg
@@ -32,7 +32,7 @@ Coleccionamos millones de anécdotas que ya os contaremos en otro momento, pero 
 Para elegir y amueblar una casa, hay que tener en cuenta muchas cosas, pero claro, en este caso hablábamos de una furgoneta, y de unas dimensiones mucho más reducidas que una casa, aunque sí es cierto que en Madrid hay casas más pequeñas que nuestra furgoneta 👅.
 
 ¿L2H2? ¿L2H3? ... ¿qué es L2 y H3? Fiat Ducato, Mercedes Sprinter ... ¿segunda mano o nueva? ... ¿la camperizamos nosotros o invertimos en que nos la hagan unos profesionales? Muchas dudas y muchas incógnitas, además de muchos otros miedos que poco a poco fuimos disipando investigando y preguntando a otros grandes furgoneteros como los chicos de 
-<a target="_blank" rel="external noopener noreferrer" href="https://www.instagram.com/timelesslifeproject/">Timeless Life Project</a>, [Viajando Simple](https://www.viajandosimple.com/) o [Viajar en Lata](https://www.viajarenlata.com/).
+<a target="_blank" rel="external noopener noreferrer" href="https://www.instagram.com/timelesslifeproject/">Timeless Life Project</a>, <a target="_blank" rel="external noopener noreferrer" href="https://www.viajandosimple.com/">Viajando Simple</a> o <a target="_blank" rel="external noopener noreferrer" href="https://www.viajarenlata.com/">Viajar en Lata</a>.
 
 ## Dejemos a los expertos hacer su trabajo
 

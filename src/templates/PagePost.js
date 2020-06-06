@@ -16,9 +16,15 @@ function PagePost({ path, data }) {
 
   const { author, headline, title: siteTitle, siteUrl, social } = site
   const { summary, hero: image, keywords, title } = post.frontmatter
-  console.log(post.frontmatter)
+
+  let home = `/${post.fields.langKey}`
+  if (post.fields.langKey === 'es') {
+    home = '/'
+  }
+
   return (
     <Layout
+      prefix={home}
       post={{
         date: post.frontmatter.date,
         summary,

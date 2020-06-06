@@ -8,9 +8,9 @@ import { urlGenerator } from '../../helpers'
 
 import styl from './PostCard.module.css'
 
-function PostCard({ content, image, slug, title }) {
+function PostCard({ content, image, prefix, slug, title }) {
   return (
-    <Link to={urlGenerator(BLOG_PATH, slug)} className={styl.postCard}>
+    <Link to={urlGenerator(`/${prefix}${BLOG_PATH}`, slug)} className={styl.postCard}>
       {Object.keys(image).length ? <Img fluid={image} alt={title} className={styl.img} loading="lazy" /> : null}
       <div className={styl.content}>
         <h3 className={styl.title}>{title}</h3>
@@ -23,12 +23,14 @@ function PostCard({ content, image, slug, title }) {
 PostCard.propTypes = {
   content: PropTypes.string.isRequired,
   image: PropTypes.object,
+  prefix: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
 }
 
 PostCard.defaultProps = {
   createdAt: '',
+  prefix: '',
   image: {},
 }
 

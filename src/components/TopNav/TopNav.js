@@ -22,7 +22,7 @@ const scrollEvent = (elem) => () => {
   return false
 }
 
-function Header({ title, social }) {
+function Header({ prefix, title, social }) {
   const elem = React.useRef(null)
   const scroll = scrollEvent(elem)
 
@@ -38,7 +38,7 @@ function Header({ title, social }) {
       <div className={styl.container}>
         <Social social={social} />
         <h1 className={styl.title}>
-          <Link to="/" className={styl.brand}>
+          <Link to={prefix} className={styl.brand}>
             {title}
           </Link>
         </h1>
@@ -51,6 +51,7 @@ function Header({ title, social }) {
 }
 
 Header.propTypes = {
+  prefix: PropTypes.string,
   title: PropTypes.string,
   social: PropTypes.shape({
     name: PropTypes.string,
@@ -59,6 +60,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
+  prefix: '',
   title: '',
   social: {},
 }
