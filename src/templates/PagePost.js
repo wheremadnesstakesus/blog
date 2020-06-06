@@ -9,7 +9,12 @@ import SEO from '../components/SEO'
 import { urlGenerator } from '../helpers'
 import useSiteInformation from '../hooks/useSiteInformation'
 
-function PagePost({ path, data, location }) {
+import es from '../i18n/es'
+import it from '../i18n/it'
+
+function PagePost(props) {
+  console.log('[DEBUG]: PagePost -> props', props)
+  const { path, data, location } = props
   const { markdownRemark: post } = data
 
   const { siteMetadata: site } = useSiteInformation()
@@ -18,7 +23,15 @@ function PagePost({ path, data, location }) {
   const { summary, hero: image, keywords, title } = post.frontmatter
 
   let home = `/${post.fields.langKey}`
+  let message = {
+    builtWith: it.builtWith,
+    copyright: it.copyright,
+  }
   if (post.fields.langKey === 'es') {
+    message = {
+      builtWith: es.builtWith,
+      copyright: es.copyright,
+    }
     home = '/'
   }
 
@@ -35,7 +48,7 @@ function PagePost({ path, data, location }) {
         words: post.wordCount.words,
         image: image?.childImageSharp.fluid,
       }}
-      site={{ author, headline, title: siteTitle, social }}
+      site={{ author, headline, title: siteTitle, social, ...message }}
     >
       <SEO description={summary} isPost keywords={keywords} title={title} url={urlGenerator(siteUrl, path)} />
       <p>{post.frontmatter.date}</p>
