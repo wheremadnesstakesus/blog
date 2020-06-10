@@ -6,11 +6,17 @@ draft: false
 featured: false
 hero: ./nos-vamos-a-vivir-a-una-furgoneta.jpg
 tags:
-  - test
-  - casa
+  - vanlife
 keywords:
-  - key
-  - keyword
+  - dondelalocuranoslleve
+  - vanlife
+  - furgone
+  - viaggia
+  - viaggio
+  - vita
+  - avventura
+  - decisione
+  - camper
 ---
 # Andiamo a vivere in un furgone!
 
@@ -22,7 +28,7 @@ Prima di fare questo passo e condividere questa scelta con i nostri familiari, c
 
 Dopo molte ricerche, un giorno, José decise di preparare per Fede un viaggio a sorpresa a Barcellona, dove noleggiarono una Fiat Ducato L2H2 per 12 giorni attraversando la costa catalana, il sud della Francia e la costa dei Paesi Baschi.
 
-![test](/images/nuestra-primera-furgoneta_il-nostro-primo-van.jpg)
+![Il nostro primo van](/images/nuestra-primera-furgoneta_il-nostro-primo-van.jpg)
 
 Abbiamo collezionato moltissimi aneddoti che racconteremo in un altro momento. Per ora l’importante è che, una volta tornati a Madrid, non potevamo toglierci dalla testa il furgone e la libertà assoluta che avevamo vissuto in quei giorni. Questa fu la scintilla che accese il conto alla rovescia.
 
@@ -36,7 +42,7 @@ L2H2? L2H3?... Cosa vuol dire L2 e H3? Fiat Ducato, Mercedes Sprinter… Nuova o
 
 Entrambi siamo sempre stati dei sognatori ed adoriamo imparare cose nuove, per questo avevamo deciso di convertire il furgone con le nostre mani. Ci siamo visti un sacco di video ma, poco a poco, ci siamo resi conto che ci avremmo messo tantissimo tempo e, comunque, c’erano moltissime cose di cui non sapevamo nulla: come montare un’istallazione elettrica, come funziona il gas, l’acqua, l’omologazione… Non conoscevamo poi nessuno che ci avrebbe potuto aiutare. Alla fine abbiamo quindi deciso di affidare la conversione del furgone a degli esperti. Non è stata una scelta facile, ci sarebbe piaciuto tantissimo costruire la nostra propria casa ma, a parte che non avevamo né le conoscenze, né lo spazio, né gli strumenti per farlo, abbiamo preferito la soluzione più rapida, così da poter iniziare subito la nostra avventura.
 
-![test](/images/plano-flowerneta_piantina-flowerneta.jpg)
+![Piantina Flowerneta](/images/plano-flowerneta_piantina-flowerneta.jpg)
 
 Non abbiamo comunque rinunciato a disegnare lo schema del camper in un quaderno, scegliendo la posizione e grandezza del letto, della cucina, del tavolo. Abbiamo poi trovato una Fiat Ducato L3H2 a km0 a Jerez (nel sud della Spagna, vicinissimo a Conil, dove vivevamo in quel momento). Dovevamo solo scegliere a chi affidare il lavoro. Abbiamo chiamato molte officine specializzate e, alla fine, ne abbiamo scelta una a Malaga. Ora dovevamo solo aspettare, decidere cosa ci saremmo portati con noi e, ovviamente, il percorso che avremmo seguito.
 
@@ -44,11 +50,11 @@ Non abbiamo comunque rinunciato a disegnare lo schema del camper in un quaderno,
 
 Arrivato il momento, siamo andati a prendere il furgone e l’abbiamo portato a Cadiz per riempirlo con tutte le cose di cui avremmo avuto bisogno nella nostra nuova vita.
 
-![test](/images/ya-tenemos-nuestra-flowerneta_ecco-la-flowerneta.jpg)
+![Ecco la Flowerneta](/images/ya-tenemos-nuestra-flowerneta_ecco-la-flowerneta.jpg)
 
 Sapete? Non è facile scegliere cosa portarsi dietro per vivere in un furgone di 7 metri quadrati. Avete idea di quante cose inutili si accumulano in una casa?
 
-![test](/images/preparando-la-mudanza_preprando-il-trasloco.jpg)
+![Preprando il trasloco](/images/preparando-la-mudanza_preprando-il-trasloco.jpg)
 
 Era già tutto pronto: il percorso da seguire, l’assicurazione, i vestiti e, soprattutto, la voglia di cominciare!
 
@@ -56,7 +62,7 @@ Era già tutto pronto: il percorso da seguire, l’assicurazione, i vestiti e, s
 
 Il 31 maggio è una data che non dimenticheremo mai. È stato il giorno in cui il nostro sogno si è avverato. Abbiamo messo in moto la nostra casetta e siamo partiti verso la nostra prima meta: Siviglia, per arrivare poi in Portogallo, Francia, Italia ed il mondo.
 
-![test](/images/nuestro-viaje_il-nostro-viaggio.jpg)
+![Il nostro viaggio](/images/nuestro-viaje_il-nostro-viaggio.jpg)
 
 Poco a poco vi racconteremo di più sulla nostra vita, le avventure, le paure, le esperienze. Vogliamo raccontare tutto senza filtri, attenendoci alla realtà pura e semplice, per trasmettervi ciò che abbiamo vissuto. Abbiamo imparato moltissimo da altri vanlifers, ed ora è il momento di fare la nostra parte per raccontare com’è veramente questo stile di vita, eliminando tutti gli stereotipi che sono nati sulla vanlife.
 
