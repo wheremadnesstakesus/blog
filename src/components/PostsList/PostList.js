@@ -6,6 +6,7 @@ import PostCard from '../PostCard'
 import styl from './PostList.module.css'
 
 function PostList({ posts, title }) {
+  console.log('[DEBUG]: PostList -> posts', posts)
   if (!posts.length) {
     return null
   }

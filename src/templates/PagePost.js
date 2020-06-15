@@ -13,7 +13,6 @@ import es from '../i18n/es'
 import it from '../i18n/it'
 
 function PagePost(props) {
-  console.log('[DEBUG]: PagePost -> props', props)
   const { path, data, location } = props
   const { markdownRemark: post } = data
 

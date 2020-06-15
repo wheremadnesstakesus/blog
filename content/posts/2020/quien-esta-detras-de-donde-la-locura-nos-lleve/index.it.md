@@ -1,7 +1,7 @@
 ---
 title: Chi c’è dietro Donde la locura nos lleve
 date: 2020-06-10T17:35:26.162Z
-summary: 
+summary: Se non l’avete ancora capito, ve lo diciamo noi: abbiamo proprio la testa fra le nuvole. È quasi un anno che viaggiamo in camper e che raccontiamo le nostre avventure su Instagram, abbiamo appena iniziato a scrivere questo blog, ma non ci siamo ancora presentati.
 draft: false
 featured: false
 hero: ./quien-esta-detras-de-donde-la-locura-nos-lleve.jpg

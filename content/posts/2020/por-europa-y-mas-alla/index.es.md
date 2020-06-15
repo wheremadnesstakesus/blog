@@ -1,6 +1,7 @@
 ---
 title: Por Europa, y más allá!
 date: 2020-06-15T16:16:24.801Z
+summary: Esta era nuestra idea principal, llevábamos ya unas semanas planeando algunas paradas de nuestro viaje, sabíamos más o menos que ruta íbamos a seguir por Europa y que cosas queríamos visitar, también habíamos visto algunos lugares en Park4night donde aparcar o dormir ... a grandes rasgos teníamos bastantes cosas, otras las dejábamos para improvisar durante el viaje, ¿que locura iba a ser esta si íbamos ya con todo planeado?
 draft: false
 featured: false
 hero: ./por-europa-y-mas-alla.jpg
@@ -18,7 +19,6 @@ keywords:
   - sevilla
   - camper
 ---
-
 # Por Europa, y más allá!
 
 Esta era nuestra idea principal, llevábamos ya unas semanas planeando algunas paradas de nuestro viaje, sabíamos más o menos que ruta íbamos a seguir por Europa y que cosas queríamos visitar, también habíamos visto algunos lugares en Park4night donde aparcar o dormir ... a grandes rasgos teníamos bastantes cosas, otras las dejábamos para improvisar durante el viaje, ¿que locura iba a ser esta si íbamos ya con todo planeado?

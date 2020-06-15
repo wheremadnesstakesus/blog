@@ -1,6 +1,7 @@
 ---
 title: In giro per l’Europa, e oltre!
 date: 2020-06-15T16:16:24.801Z
+summary: Questa era la nostra idea principale. Stavamo pianificando il viaggio da un paio di settimane, sapevamo più o meno che itinerario avremmo seguito e le cose che non volevamo assolutamente perderci. Avevamo anche trovato alcuni posti dove dormire, grazie a Park4night… Avevamo organizzato alcune cose, e altre le avevamo lasciate in sospeso per fare spazio all’improvvisazione. Che pazzia sarebbe mai stata se avessimo organizzato tutto?
 draft: false
 featured: false
 hero: ./por-europa-y-mas-alla.jpg
@@ -18,7 +19,6 @@ keywords:
   - siviglia
   - camper
 ---
-
 # In giro per l’Europa, e oltre!
 
 Questa era la nostra idea principale. Stavamo pianificando il viaggio da un paio di settimane, sapevamo più o meno che itinerario avremmo seguito e le cose che non volevamo assolutamente perderci. Avevamo anche trovato alcuni posti dove dormire, grazie a Park4night… Avevamo organizzato alcune cose, e altre le avevamo lasciate in sospeso per fare spazio all’improvvisazione. Che pazzia sarebbe mai stata se avessimo organizzato tutto?
