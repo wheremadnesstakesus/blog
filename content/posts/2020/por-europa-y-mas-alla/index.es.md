@@ -127,11 +127,19 @@ Seguimos la costa azul hacia Italia entrando por Sète y pasando por la Camargue
 
 Habíamos entrado en Italia, por la zona de Liguria, y para pasar nuestra primera noche allí, nos fuimos a Rocchetta Nervina. Para nuestra sorpresa, eran las fiestas del pueblo, pero estábamos demasiado cansados para ni siquiera, salir de la Flowerneta, y además, queríamos guardar fuerzas para el día siguiente, ya que nos íbamos a levantar temprano para darnos un baño en el río. Lo hicimos, y nos quedamos pasmados. El río había formado pequeñas piscinas y el agua corría con un color verde turquesa. No está nada mal para ser nuestro primer destino en Italia.
 
-FOTO ROCHETTA NERVINA
+<div style="max-width:350px;width:auto;margin:0 auto;">
+
+![Roccheta Nervina](./images/rocchetta-nervina.jpg)
+
+</div>
 
 El tiempo apremiaba, ya que nos habíamos puesto fecha para llegar a Crevalcore, cerca de Bologna, de donde es Fede y vive su familia. Pasamos por Cervo y [...] donde conocimos a una pareja de españoles que viajaba en su camión, y con los que cenamos en nuestra furgoneta esa noche. Eran las primeras personas que invitábamos a comer en la Flower, en nuestra casa! Y nos encantó la experiencia. Visitamos y recorrimos Cinque Terre, con los 5 pueblitos mágicos e hicimos una ruta entre dos de ellos para finalizar este magnífico día.
 
-FOTO CINQUE TERRE
+<div style="max-width:350px;width:auto;margin:0 auto;">
+
+![Cinque Terre](./images/cinque-terre.jpg)
+
+</div>
 
 Nuestra primera parte del viaje llegaba a su fin , ya que desde Cinque Terre, poníamos rumbo a Crevalcore.
 
@@ -139,7 +147,11 @@ Nuestra primera parte del viaje llegaba a su fin , ya que desde Cinque Terre, po
 
 Nuestra idea era quedarnos un par de semanas viendo a la familia y amigos de Fede, y hay que decir que teníamos muchas ganas de ello, pero para viajar y vivir en la furgoneta o en cualquier otro lugar, hace falta dinero. José trabaja de forma remota como desarrollador web, pero a Fede se le había acabado el proyecto en el que estaba trabajando como traductora, su pasión. Después de varias entrevistas, llegó una oferta, y el momento de tomar una decisión. Teníamos que parar para ganar algo de dinero, y en esta ocasión, la oportunidad surgió en Lisboa, Portugal. Si aceptábamos esa oferta, teníamos que volver allí, una temporada, reponernos económicamente, y seguir nuestro viaje.
 
-FOTO LISBOA
+<div style="max-width:350px;width:auto;margin:0 auto;">
+
+![Llegamos a Lisboa](./images/llegamos-a-lisboa_siamo-arrivati-a-lisbona.jpg)
+
+</div>
 
 Esta parte de la historia, algunos ya la conocéis y es que decidimos aceptar la oferta e irnos a Lisboa, pero durante ese tiempo, seguiríamos viviendo en la que es nuestra casa, la Flowerneta. Nuestra idea, y que ya teníamos planeada, era en Abril, irnos a Marruecos y recorrer África, pero con lo que está pasando a nivel mundial, y que ya todos sabéis, nuestros planes han variado un poco, así que esperaremos a que abran las fronteras para ir a Italia, ver a la familia y luego, desde ahí … eso ya os lo contaremos más adelante.
 
