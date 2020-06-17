@@ -132,7 +132,7 @@ Siamo entrati in Italia attraverso la Liguria, ed abbiamo passato la prima notte
 
 </div>
 
-Il tempo ed i chilometri scorrevano veloci, non mancava tanto per arrivare a Crevalcore (vicino a Bologna), dove vive la famiglia di Fede. Siamo passati per Cervo e [...] dove abbiamo conosciuto una coppietta di spagnoli che viaggiavano nel loro camion e con cui abbiamo cenato nella Flowerneta.Sono stati i nostri primi ospiti! Abbiamo visitato le Cinque Terre, facendo a piedi uno dei sentieri che collegano i paesini.
+Il tempo ed i chilometri scorrevano veloci, non mancava tanto per arrivare a Crevalcore (vicino a Bologna), dove vive la famiglia di Fede. Siamo passati per Cervo, dove abbiamo conosciuto una coppietta di spagnoli che viaggiavano nel loro camion e con cui abbiamo cenato nella Flowerneta.Sono stati i nostri primi ospiti! Abbiamo visitato le Cinque Terre, facendo a piedi uno dei sentieri che collegano i paesini.
 
 <div style="max-width:350px;width:auto;margin:0 auto;">
 

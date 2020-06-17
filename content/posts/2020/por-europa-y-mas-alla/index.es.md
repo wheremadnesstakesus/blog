@@ -133,7 +133,7 @@ Habíamos entrado en Italia, por la zona de Liguria, y para pasar nuestra primer
 
 </div>
 
-El tiempo apremiaba, ya que nos habíamos puesto fecha para llegar a Crevalcore, cerca de Bologna, de donde es Fede y vive su familia. Pasamos por Cervo y [...] donde conocimos a una pareja de españoles que viajaba en su camión, y con los que cenamos en nuestra furgoneta esa noche. Eran las primeras personas que invitábamos a comer en la Flower, en nuestra casa! Y nos encantó la experiencia. Visitamos y recorrimos Cinque Terre, con los 5 pueblitos mágicos e hicimos una ruta entre dos de ellos para finalizar este magnífico día.
+El tiempo apremiaba, ya que nos habíamos puesto fecha para llegar a Crevalcore, cerca de Bologna, de donde es Fede y vive su familia. Pasamos por Cervo, donde conocimos a una pareja de españoles que viajaba en su camión, y con los que cenamos en nuestra furgoneta esa noche. Eran las primeras personas que invitábamos a comer en la Flower, en nuestra casa! Y nos encantó la experiencia. Visitamos y recorrimos Cinque Terre, con los 5 pueblitos mágicos e hicimos una ruta entre dos de ellos para finalizar este magnífico día.
 
 <div style="max-width:350px;width:auto;margin:0 auto;">
 
