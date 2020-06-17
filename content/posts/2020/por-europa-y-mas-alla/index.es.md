@@ -105,7 +105,7 @@ Antes de entrar en Francia teníamos claro que queríamos, y era montaña y send
 
 <div style="max-width:350px;width:auto;margin:0 auto;">
 
-![Parc natural de l'alt pirineu](./images/Parc natural de l'alt pirineu.jpg)
+![Parc natural de l'alt pirineu](./images/parc-natural-de-lalt-pirineu.jpg)
 
 </div>
 
