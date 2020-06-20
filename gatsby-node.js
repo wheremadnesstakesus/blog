@@ -1,7 +1,8 @@
-const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
+import path from 'path'
 
-const { BLOG_PATH } = require('./src/constants')
+import { createFilePath } from 'gatsby-source-filesystem'
+
+import { BLOG_PATH } from './src/constants'
 
 // More: https://www.gatsbyjs.org/docs/node-apis/#createPages
 exports.createPages = async ({ graphql, actions }) => {
@@ -12,13 +13,12 @@ exports.createPages = async ({ graphql, actions }) => {
     const result = await graphql(
       `
         {
-          publishedPosts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+          publishedPosts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
               node {
                 id
                 fields {
                   slug
-                  langKey
                 }
                 frontmatter {
                   title
@@ -36,10 +36,8 @@ exports.createPages = async ({ graphql, actions }) => {
       const previous = index === edges.length - 1 ? null : edges[index + 1].node
       const next = index === 0 ? null : edges[index - 1].node
 
-      let url = post.node.fields.slug
-
       createPage({
-        path: url,
+        path: `${BLOG_PATH}${post.node.fields.slug}`,
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
@@ -57,30 +55,20 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 
 // More: https://www.gatsbyjs.org/docs/node-apis/#onCreateNode
-exports.onCreateNode = ({ node, actions }) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const url = node.fileAbsolutePath
-      .replace(__dirname, '')
-      .replace('/content/posts', '')
-      .replace('/index', '')
-      .split('.')
-
-    let route = `/${url[1]}${BLOG_PATH}${url[0]}`
-    if (url[1] === 'es') {
-      route = `${BLOG_PATH}${url[0]}`
-    }
+    const value = createFilePath({
+      node,
+      getNode,
+      trailingSlash: false,
+    })
 
     createNodeField({
       name: 'slug',
       node,
-      value: route,
-    })
-    createNodeField({
-      name: 'langKey',
-      node,
-      value: url[1],
+      value,
     })
   }
 }

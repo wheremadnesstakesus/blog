@@ -1,7 +1,9 @@
-const { isDevelopment } = require('./src/helpers')
+import dotenv from 'dotenv'
+
+import { isDevelopment } from './src/helpers'
 
 if (isDevelopment) {
-  require('dotenv').config({
+  dotenv.config({
     path: '.env',
   })
 }
@@ -28,8 +30,11 @@ module.exports = {
     },
   },
   plugins: [
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -51,7 +56,6 @@ module.exports = {
         head: false,
       },
     },
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -85,14 +89,6 @@ module.exports = {
         icon: 'src/assets/logo.png',
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: ['/Home'],
-      },
-    },
-    'gatsby-plugin-postcss',
-    'gatsby-plugin-svgr',
     process.env.ANALYZE_BUNDLE_SIZE && {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
@@ -101,26 +97,5 @@ module.exports = {
         analyzerMode: 'static',
       },
     },
-    process.env.INSTAGRAM_TOKEN && {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        // eslint-disable-next-line camelcase
-        access_token: process.env.INSTAGRAM_TOKEN,
-        // eslint-disable-next-line camelcase
-        instagram_id: process.env.INSTAGRAM_ID,
-        username: process.env.INSTAGRAM_USERNAME,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-i18n',
-      options: {
-        langKeyDefault: 'es',
-        useLangKeyLayout: false,
-        prefixDefault: false,
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ].filter(Boolean),
 }

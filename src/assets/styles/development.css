@@ -1,7 +1,0 @@
-img:not([alt]),
-img[alt=''],
-button:not([aria-label]),
-button[aria-label=''] {
-  border: 5px solid red;
-  box-sizing: border-box;
-}
