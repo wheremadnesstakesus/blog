@@ -5,6 +5,8 @@ import { createFilePath } from 'gatsby-source-filesystem'
 import { BLOG_PATH } from './src/constants'
 
 exports.onCreateWebpackConfig = ({ actions }) => {
+  console.log('---', path.resolve(__dirname, 'src'));
+
   actions.setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
