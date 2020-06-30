@@ -4,6 +4,14 @@ import { createFilePath } from 'gatsby-source-filesystem'
 
 import { BLOG_PATH } from './src/constants'
 
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}
+
 // More: https://www.gatsbyjs.org/docs/node-apis/#createPages
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -33,7 +41,9 @@ exports.createPages = async ({ graphql, actions }) => {
     const { edges } = result.data.publishedPosts
 
     edges.forEach((post, index) => {
+      // eslint-disable-next-line unicorn/no-null
       const previous = index === edges.length - 1 ? null : edges[index + 1].node
+      // eslint-disable-next-line unicorn/no-null
       const next = index === 0 ? null : edges[index - 1].node
 
       createPage({
@@ -47,10 +57,10 @@ exports.createPages = async ({ graphql, actions }) => {
       })
     })
 
-    return null
-  } catch (e) {
-    console.error(e)
-    throw e
+    return
+  } catch (error) {
+    console.error(error)
+    throw error
   }
 }
 

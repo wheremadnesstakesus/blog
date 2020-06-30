@@ -1,4 +1,3 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 
 function PagePost() {
@@ -8,5 +7,3 @@ function PagePost() {
 PagePost.propTypes = {}
 
 export default PagePost
-
-export const BlogPost = graphql``

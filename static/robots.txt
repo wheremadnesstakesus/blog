@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://microlink.io/sitemap.xml

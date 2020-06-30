@@ -26,6 +26,16 @@
   "bin": {
     "blog": "./bib/cli"
   },
+  "files": [
+    "gatsby-browser.js",
+    "gatsby-config.js",
+    "gatsby-node.js",
+    "src",
+    "static"
+  ],
+  "engines": {
+    "node": "12.18.x"
+  },
   "scripts": {
     "start": "yarn run dev",
     "dev": "NODE_OPTIONS='-r esm' gatsby develop",
@@ -33,23 +43,24 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "postclean": "rm -rf node_modules && yarn.lock && yarn cache clean --force",
-    "install": "yarn install",
     "lint": "yarn run lint:js",
     "lint:js": "eslint '**/*.js'",
-    "fix": "yarn run fix",
+    "fix": "yarn run fix:js",
     "fix:js": "eslint --fix '**/*.js'",
-    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build"
+    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
+    "@emotion/core": "latest",
+    "@emotion/styled": "latest",
     "@svgr/webpack": "latest",
     "classnames": "latest",
     "dotenv": "latest",
     "esm": "latest",
     "gatsby": "latest",
     "gatsby-image": "latest",
-    "gatsby-plugin-emotion": "^4.3.4",
+    "gatsby-plugin-emotion": "latest",
     "gatsby-plugin-google-analytics": "latest",
     "gatsby-plugin-manifest": "latest",
     "gatsby-plugin-react-helmet": "latest",
@@ -82,8 +93,10 @@
     "eslint-plugin-promise": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-unicorn": "latest",
     "husky": "latest",
     "lint-staged": "latest",
+    "npm-check-updates": "latest",
     "prettier": "latest",
     "react-axe": "latest",
     "slugify": "latest"
