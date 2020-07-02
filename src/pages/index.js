@@ -6,9 +6,9 @@ import { Layout } from 'components'
 import { useSiteInformation } from 'hooks'
 
 function Home() {
-  const siteMetadata = useSiteInformation()
-  console.log('[DEBUG]: Home -> siteMetadata', siteMetadata)
-  return <Layout>Home</Layout>
+  const { social, title } = useSiteInformation()
+
+  return <Layout></Layout>
 }
 
 Home.propTypes = {}

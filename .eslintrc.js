@@ -109,7 +109,7 @@ module.exports = {
       },
     ],
     'import/newline-after-import': ['error'],
-    'import/no-unresolved': ['error', { ignore: ['^components', '^hooks'] }],
+    'import/no-unresolved': ['error', { ignore: ['^components', '^hooks', 'theme'] }],
     'prettier/prettier': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
@@ -135,7 +135,7 @@ module.exports = {
     'unicorn/filename-case': 'off',
   },
   settings: {
-    'import/internal-regex': '^(components|hooks)',
+    'import/internal-regex': '^(components|hooks|theme)',
     react: {
       version: 'detect',
     },
