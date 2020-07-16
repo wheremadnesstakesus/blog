@@ -24,3 +24,5 @@ Social.defaultProps = {
   facebook: '',
   instagram: '',
 }
+
+export { Social }

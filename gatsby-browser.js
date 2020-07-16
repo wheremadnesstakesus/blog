@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import 'typeface-montserrat'
 import 'typeface-roboto'
 
-import { theme } from 'theme'
+import { theme, ResetStyles } from 'theme'
 
 import { isDevelopment } from './src/helpers'
 
@@ -17,4 +17,9 @@ export const onInitialClientRender = async () => {
 }
 
 // eslint-disable-next-line react/prop-types
-export const wrapRootElement = ({ element }) => <ThemeProvider theme={theme}>{element}</ThemeProvider>
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={theme}>
+    <ResetStyles />
+    {element}
+  </ThemeProvider>
+)

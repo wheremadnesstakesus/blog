@@ -44,12 +44,13 @@
     "clean": "gatsby clean",
     "postclean": "rm -rf node_modules && yarn.lock && yarn cache clean --force",
     "lint": "yarn run lint:js",
-    "lint:js": "eslint '**/*.js'",
+    "lint:js": "eslint . --ext .js",
     "fix": "yarn run fix:js",
-    "fix:js": "eslint --fix '**/*.js'",
+    "fix:js": "eslint . --fix --ext .js",
     "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
     "update": "ncu -u",
-    "update:check": "ncu -- --error-level 2"
+    "update:check": "ncu -- --error-level 2",
+    "storybook": "start-storybook -p 8001"
   },
   "dependencies": {
     "@emotion/core": "latest",
@@ -79,7 +80,7 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-feather": "^2.0.8",
+    "react-feather": "latest",
     "react-helmet": "latest",
     "typeface-montserrat": "latest",
     "typeface-roboto": "latest"
@@ -87,8 +88,14 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@storybook/addon-a11y": "latest",
+    "@storybook/addon-actions": "latest",
+    "@storybook/addon-knobs": "latest",
+    "@storybook/addon-viewport": "latest",
+    "@storybook/addons": "latest",
+    "@storybook/react": "latest",
     "babel-eslint": "latest",
-    "emotion-theming": "^10.0.27",
+    "emotion-theming": "latest",
     "eslint": "latest",
     "eslint-config-prettier": "latest",
     "eslint-plugin-import": "latest",

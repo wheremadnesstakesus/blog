@@ -9,20 +9,20 @@ const slugify = require('slugify')
 
 const BASE_DIR = 'content/posts'
 
-const TYPE_ARRAY = ['keywords', 'tags']
+const TYPE_ARRAY = new Set(['keywords', 'tags'])
 
-function add(field, value = undefined, text) {
+function add(field, value, text) {
   if (value) {
-    if (TYPE_ARRAY.includes(field)) {
+    if (TYPE_ARRAY.has(field)) {
       return `${text}
-${field}:\n\t${value.map((val) => `- ${val}`).join('\n\t')}`
+${field}:\n\t${value.map((value_) => `- ${value_}`).join('\n\t')}`
     }
 
     return `${text}
 ${field}: ${value}`
   }
 
-  return undefined
+  return
 }
 
 function generateMD({ title, date, ...rest }) {
@@ -50,7 +50,7 @@ function runCLI(input, options) {
 
   const slug = slugify(title, {
     lower: true,
-    remove: /[^a-zA-Z0-9\-_ ]/g,
+    remove: /[^\w \-]/g,
     replacement: '-',
   })
 
@@ -62,9 +62,9 @@ function runCLI(input, options) {
     fs.mkdirSync(dir, { recursive: true })
   }
 
-  fs.writeFile(`${dir}/index.md`, generateMD({ title, date: date.toISOString(), ...options }), (err) => {
-    if (err) {
-      throw err
+  fs.writeFile(`${dir}/index.md`, generateMD({ title, date: date.toISOString(), ...options }), (error) => {
+    if (error) {
+      throw error
     }
 
     console.log('[SUCCESS] The post has been created successfully!')
@@ -110,12 +110,12 @@ const cli = require('meow')({
 
 const { input, flags: options } = cli
 
-const normalize = Object.keys(flags).reduce((acc, k) => {
+const normalize = Object.keys(flags).reduce((accumulator, k) => {
   if (options && options[k]) {
-    acc[k] = options[k]
+    accumulator[k] = options[k]
   }
 
-  return acc
+  return accumulator
 }, {})
 
 runCLI(input, normalize)

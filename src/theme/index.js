@@ -1,5 +1,2 @@
-export const theme = {
-  colors: {
-    primary: 'blue',
-  },
-}
+export { theme } from './theme'
+export { ResetStyles } from './ResetStyles'
