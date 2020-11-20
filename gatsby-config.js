@@ -8,7 +8,7 @@ if (isDevelopment) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Donde la locura nos lleve!',
+    title: 'THIS IS A TEST!',
     author: '@dondelalocura',
     siteUrl: 'https://dondelalocuranoslleve.com',
     startDate: '2019-05-30',
