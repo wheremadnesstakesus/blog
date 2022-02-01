@@ -1,0 +1,22 @@
+{
+  "title": "Donde la locura nos lleve!",
+  "description": "Blog de viajes donde dos locos contaran sus pequeñas aventuras alrededor del mundo",
+  "keywords": ["viajes", "vanlife", "aventuras"],
+  "author": "@dondelalocura",
+  "url": "https://dondelalocuranoslleve.com",
+  "startDate": "2019-05-30",
+  "social": {
+    "twitter": {
+      "name": "@dondelalocuranoslleve",
+      "url": "https://twitter.com/dondelalocuranoslleve"
+    },
+    "facebook": {
+      "name": "dondelalocuranoslleve",
+      "url": "https://www.facebook.com/dondelalocuranoslleve"
+    },
+    "instagram": {
+      "name": "donde_la_locura_nos_lleve",
+      "url": "https://instagram.com/donde_la_locura_nos_lleve"
+    }
+  }
+}
