@@ -1,6 +1,4 @@
-import React from 'react'
-
-function NotFoundPage() {
+function NotFoundPage () {
   return <div> Not Found</div>
 }
 

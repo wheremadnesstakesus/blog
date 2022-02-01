@@ -1,3 +1,0 @@
-@define-mixin animation $type, $time: 1s, $animation: ease {
-  transition: $type $time $animation;
-}
